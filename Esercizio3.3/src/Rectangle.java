@@ -1,7 +1,6 @@
 public class Rectangle extends Shape {
-    public Rectangle(double a, double b) {
-        this.width = a;
-        this.height = b;
+    public Rectangle(double width, double height) {
+        super(width, height);
     }
     @Override
     public double calcolaArea() {
