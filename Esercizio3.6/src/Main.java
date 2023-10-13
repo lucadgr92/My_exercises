@@ -3,8 +3,8 @@ public class Main {
         Rectangle rectangle1 = new Rectangle(25,37, ShapeCheck.RECTANGLE);
         Triangle triangle1 = new Triangle(53,64, ShapeCheck.TRIANGLE);
 
-        System.out.println(ShapeCheck.RECTANGLE.shapeVerifier());
-        System.out.println(ShapeCheck.TRIANGLE.shapeVerifier());
+        System.out.println(rectangle1.tipo.shapeVerifier());
+        System.out.println(triangle1.tipo.shapeVerifier());
     }
 }
 
