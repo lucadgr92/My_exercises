@@ -1,10 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        Rectangle rectangle1 = new Rectangle(25,37, ShapeCheck.RECTANGLE);
-        Triangle triangle1 = new Triangle(53,64, ShapeCheck.TRIANGLE);
+        Rectangle rectangle1 = new Rectangle(25,37, ShapeCheck.Type.RECTANGLE);
+        Triangle triangle1 = new Triangle(53,64, ShapeCheck.Type.TRIANGLE);
+        ShapeCheck sh = new ShapeCheck();
 
-        System.out.println(rectangle1.tipo.shapeVerifier());
-        System.out.println(triangle1.tipo.shapeVerifier());
+        System.out.println(sh.shapeVerifier(rectangle1));
+        System.out.println(sh.shapeVerifier(triangle1));
     }
 }
 

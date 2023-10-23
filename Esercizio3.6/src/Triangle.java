@@ -1,8 +1,8 @@
 public class Triangle extends Shape{
-    public Triangle(double width, double height, ShapeCheck tipo) {
+    public Triangle(double width, double height, ShapeCheck.Type tipo) {
         super(width, height, tipo);
     }
     double calcolaArea () {
-        return (this.width * this.height) / 2;
+        return (this.getWidth() * this.getHeight()) / 2;
     }
 }
