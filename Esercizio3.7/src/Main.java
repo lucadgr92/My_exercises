@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-    stringProcessor("Ottogenario", 37);
+    stringProcessor("Ottogenario", 9);
     }
 public static void stringProcessor(String string, int index) {
         StringBuilder hexaDecimal = new StringBuilder();
