@@ -3,14 +3,18 @@ public class Main {
         divideBy(10);
     }
 
-    public static void divideBy (int arg1) {
+    public static int divideBy (int arg1) {
+       int result = 0;
         try {
-            int result = arg1 / 0;
-        } catch (ArithmeticException e) {
-            System.out.println("Errore: " + e.getMessage());
-        }
+           result = arg1 / 0;
+       } catch (ArithmeticException e) {
+           System.out.println("Errore: " + e.getMessage());
+       }
+       return result;
     }
 }
 
 //Scrivere una funzione che provi a
 // dividere un numero per 0 e catturi l'eccezione leggendone il messaggio.
+
+//Manca la gestione con try catch
