@@ -1,52 +1,39 @@
+import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-    Auto auto1 = new Auto(2000,"NB676CJ","Fiat","Punto");
 
-        int cylinderCap = auto1.getCylinderCap();
-        String licensePlate = auto1.getLicensePlate();
-        String brand = auto1.getBrand();
-        String model = auto1.getModel();
-        // Invocazione di tutti i getter dell'oggetto
-        // precedentemente inizializzato tramite costruttore.
+        Fruit frutto1 = new Fruit("Mela");
+        Fruit frutto2 = new Fruit("Melograno");
+        Fruit frutto3 = new Fruit("Melacotogna");
+        Fruit frutto4 = new Fruit("Pera");
+
+        LinkedList<Fruit> orchard = new LinkedList<>();
+
+        orchard.add(frutto1);
+        orchard.add(frutto2);
+        orchard.add(frutto3);
+        orchard.add(frutto4);
+
+        for(int i = 0; i < orchard.size(); i++) {
+            System.out.println(orchard.get(i));
+        }
+
+        Fruit frutto5 = new Fruit("Banana");
+        Fruit frutto6 = new Fruit("Ciliegia");
+
+        orchard.addFirst(frutto5);
+        orchard.addLast(frutto6);
 
 
-        System.out.println("Cilindrata: " + cylinderCap);
-        System.out.println("Targa: " + licensePlate);
-        System.out.println("Produttore: " + brand);
-        System.out.println("Modello: " + model);
-        // Stampa dimostrativa dei valori assegnati alle singole
-        // variabili tramite invocazione dei getter.
-
-        auto1.setCylinderCap(3000);
-        auto1.setLicensePlate("CJ575CJ");
-        auto1.setBrand("Toyota");
-        auto1.setModel("Corolla");
-        // Invocazione dimostrativa dei setter per la modifica dei
-        // singoli valori assegnati alle proprietà dell'oggetto.
-
-        cylinderCap = auto1.getCylinderCap();
-        licensePlate = auto1.getLicensePlate();
-        brand = auto1.getBrand();
-        model = auto1.getModel();
-        // Nuova invocazione di tutti i getter dell'oggetto
-        // a scopo dimostrativo a seguito della riassegnazione dei valori
-        // dell'oggetto tramite setter.
-
-        System.out.println(" ");
-
-        System.out.println("Cilindrata: " + cylinderCap);
-        System.out.println("Targa: " + licensePlate);
-        System.out.println("Produttore: " + brand);
-        System.out.println("Modello: " + model);
-        // Stampa dimostrativa dei valori assegnati tramite getter
-        // per dimostrare l'avvenuta modifica dei valori assegnati
-        // all'oggetto.
-
+        for(int i = 0; i < orchard.size(); i++) {
+            System.out.println(orchard.get(i));
+        }
     }
-
-    // Si noti come il settaggio delle proprietà originarie della
-    // classe come private impedisca l'accesso alle medesime se non
-    // tramite gli appositi metodi costruttori, getter e setter.
-
 }
+
+//Creare una classe Fruit che accenti nel costruttore il parametro name (String)
+//In questa classe avere i metodi pubblici per ottenere le informazioni.
+//Creare un LinkedList con elementi e stamparlo in console.
+//Aggiungere un elemento al primo posto della lista e uno all'ultimo
+//Stampare la collezione aggiornata
