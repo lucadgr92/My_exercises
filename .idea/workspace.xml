@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fa098f5e-dea5-435f-b52a-804db640a493" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Esercizio2.1/Esercizio2.1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio2.2/Esercizio2.2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio2.3/Esercizio2.3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio2.4/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Esercizio2.4/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio2.4/Esercizio2.4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio2.5/Esercizio2.5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio2.6/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Esercizio2.6/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio2.6/Esercizio2.6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio3.1/Esercizio3.1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio3.2/Esercizio3.2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio3.4/Esercizio3.4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio3.5/Esercizio3.5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio3.6/Esercizio3.6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esercizio3.7/Esercizio3.7.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise1.1/Exercise1.1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise1.2/Exercise1.2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise1.3/Exercise1.3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise1.4/Exercise1.4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise1.5/Exercise1.5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise1.7/Exercise1.7.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise1.8/Exercise1.8.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise1.9/Exercise1.9.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2XmMASMzI6TDAC4A9P34CM2cKoU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa098f5e-dea5-435f-b52a-804db640a493" name="Changes" comment="" />
+      <created>1699229659030</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699229659030</updated>
+    </task>
+    <servers />
+  </component>
+</project>
