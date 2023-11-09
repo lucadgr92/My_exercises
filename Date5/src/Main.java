@@ -3,21 +3,40 @@ import java.time.OffsetDateTime;
 public class Main {
     public static void main(String[] args) {
 
-        OffsetDateTime firstDate = OffsetDateTime.parse("2023-03-01T13:00:00Z");
-        OffsetDateTime secondDate = OffsetDateTime.parse("2024-03-01T13:00:00Z");
+        String date1 = "2023-03-01T13:00:00Z";
+        String date2 = "2024-03-01T13:00:00Z";
 
-        boolean firstCheck = firstDate.isBefore(secondDate);
-        boolean secondCheck = secondDate.isAfter(firstDate);
-        boolean thirdCheck = firstDate.equals(OffsetDateTime.now());
-        boolean fourthCheck = secondDate.equals(OffsetDateTime.now());
-
-        System.out.println("La prima data è precedente alla seconda: " + firstCheck);
-        System.out.println("La seconda data è successiva alla prima: " + secondCheck);
-        System.out.println("La prima data è uguale ad ora: " + thirdCheck);
-        System.out.println("La seconda data è uguale ad ora: " + fourthCheck);
+        System.out.println("La prima data è precedente alla seconda: " + beforeCheck(firstDateMaker(date1), secondDateMaker(date2)));
+        System.out.println("La seconda data è successiva alla prima: " + afterCheck(firstDateMaker(date1), secondDateMaker(date2)));
+        System.out.println("La prima data è uguale ad ora: " + nowCheckOne(firstDateMaker(date1)));
+        System.out.println("La seconda data è uguale ad ora: " + nowCheckTwo(firstDateMaker(date2)));
 
 
     }
+
+    public static OffsetDateTime firstDateMaker (String str1) {
+        return OffsetDateTime.parse(str1);
+    }
+    public static OffsetDateTime secondDateMaker (String str1) {
+        return OffsetDateTime.parse(str1);
+    }
+
+    public static boolean beforeCheck (OffsetDateTime date1, OffsetDateTime date2) {
+        return date1.isBefore(date2);
+    }
+
+    public static boolean afterCheck (OffsetDateTime date1, OffsetDateTime date2) {
+        return date2.isAfter(date1);
+    }
+
+    public static boolean nowCheckOne (OffsetDateTime date1) {
+        return date1.isEqual(OffsetDateTime.now());
+    }
+
+    public static boolean nowCheckTwo (OffsetDateTime date1) {
+        return date1.isEqual(OffsetDateTime.now());
+    }
+
 }
 //Crea un oggetto data da questa stringa 2023-03-01T13:00:00Z
 //Crea un secondo oggetto data da questa stringa 2024-03-01T13:00:00Z

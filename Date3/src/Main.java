@@ -4,18 +4,17 @@ import java.time.OffsetDateTime;
 public class Main {
     public static void main(String[] args) {
 
-        OffsetDateTime fromString = OffsetDateTime.parse("2023-03-01T13:00:00Z");
+        String date = "2023-03-01T13:00:00Z";
 
-        int year = fromString.getYear();
-        int month = fromString.getMonthValue();
-        int day = fromString.getDayOfMonth();
-        DayOfWeek dayOfTheWeek = fromString.getDayOfWeek();
+        System.out.println(fromStringToDate(date).getYear());
+        System.out.println(fromStringToDate(date).getMonthValue());
+        System.out.println(fromStringToDate(date).getDayOfMonth());
+        System.out.println(fromStringToDate(date).getDayOfWeek());
 
-        System.out.println(year);
-        System.out.println(month);
-        System.out.println(day);
-        System.out.println(dayOfTheWeek);
+    }
 
+    public static OffsetDateTime fromStringToDate (String str1) {
+        return OffsetDateTime.parse(str1);
     }
 }
 

@@ -4,10 +4,16 @@ import java.time.format.FormatStyle;
 
 public class Main {
     public static void main(String[] args) {
+        String date = "2023-03-01T13:00:00Z";
+        System.out.println(dateFormatter(fromStringToDate(date)));
+    }
 
-        OffsetDateTime fromString = OffsetDateTime.parse("2023-03-01T13:00:00Z");
-        String fromOffset = fromString.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG));
-        System.out.println(fromOffset);
+    public static OffsetDateTime fromStringToDate (String str1) {
+        return OffsetDateTime.parse(str1);
+    }
+
+    public static String dateFormatter (OffsetDateTime date1) {
+        return date1.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG));
     }
 }
 

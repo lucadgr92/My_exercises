@@ -8,18 +8,32 @@ import java.util.Locale;
 public class Main {
     public static void main(String[] args) {
 
-OffsetDateTime fromString = OffsetDateTime.parse("2002-03-01T13:00:00Z");
-ZonedDateTime fromOffset = fromString.toZonedDateTime();
+        String date = "2002-03-01T13:00:00Z";
 
-String formattedFull = fromOffset.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG));
-String formattedMedium = fromOffset.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
-String formattedShort = fromOffset.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT));
 
-System.out.println(formattedFull);
-System.out.println(formattedMedium);
-System.out.println(formattedShort);
+System.out.println(toStringLong(fromStringToDate(date)));
+System.out.println(toStringMedium(fromStringToDate(date)));
+System.out.println(toStringShort(fromStringToDate(date)));
 
     }
+
+    public static ZonedDateTime fromStringToDate (String str1) {
+        OffsetDateTime fromString = OffsetDateTime.parse(str1);
+        return fromString.toZonedDateTime();
+    }
+
+    public static String toStringLong (ZonedDateTime date1) {
+        return date1.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG));
+    }
+
+    public static String toStringMedium (ZonedDateTime date1) {
+        return date1.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
+    }
+
+    public static String toStringShort (ZonedDateTime date1) {
+        return date1.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT));
+    }
+
 }
 
 //Crea un oggetto OffsetDateTime da questa stringa 2002-03-01T13:00:00Z
