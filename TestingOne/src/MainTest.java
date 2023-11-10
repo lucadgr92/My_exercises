@@ -21,4 +21,9 @@ class MainTest {
         int result = testing.intSum(+2,-2);
         assertEquals(0,result);
     }
+
+    @Test
+    void integerSum() {
+    }
+
 }
