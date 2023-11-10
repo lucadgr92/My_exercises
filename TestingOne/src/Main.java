@@ -15,10 +15,15 @@ public class Main {
         Character characterToUnbox = 'B';
         char unboxedChar = characterToUnbox.charValue();
 
-        System.out.println(intSum(int1, unboxedInt));
-        charPrinter(unboxedChar);
-        System.out.println(integerSum(boxedInt, intToUnbox));
-        characterPrinter(boxedChar);
+        try {
+
+            System.out.println(intSum(int1, unboxedInt));
+            charPrinter(unboxedChar);
+            System.out.println(integerSum(boxedInt, intToUnbox));
+            characterPrinter(boxedChar);
+        } catch (NullPointerException e) {
+            System.out.println("Errore: " + e.getMessage());
+        }
 
     }
 
