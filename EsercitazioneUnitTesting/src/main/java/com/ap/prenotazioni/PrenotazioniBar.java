@@ -11,10 +11,10 @@ public class PrenotazioniBar {
 
     public PrenotazioniBar(int nTavoli) {
         tavoli = new ArrayList<>();
-        setNumberoTavoli(nTavoli);
+        setNumeroTavoli(nTavoli);
     }
 
-    public void setNumberoTavoli(int nTavoli) {
+    public void setNumeroTavoli(int nTavoli) {
         tavoli.clear();
         for (int i = 0; i < nTavoli; i++) {
             tavoli.add(new Tavolo());

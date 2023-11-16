@@ -8,7 +8,7 @@ public class Main {
             operationSelector(Operazioni.SOTTRAZIONE, BigDecimal.valueOf(10.7), BigDecimal.valueOf(6.5));
     }
 
-     enum Operazioni {ADDIZIONE, SOTTRAZIONE, MOLTIPLICAZIONI, DIVISIONE, MIN, MAX};
+      enum Operazioni {ADDIZIONE, SOTTRAZIONE, MOLTIPLICAZIONI, DIVISIONE, MIN, MAX};
 
     public static void operationSelector (Operazioni operazione, BigDecimal arg1, BigDecimal arg2) {
 
