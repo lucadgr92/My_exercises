@@ -11,8 +11,9 @@ public class Main {
         String password = "Labefana1";
 
         try {
-            Connection connection = DriverManager.getConnection(url, username, password);
-            System.out.println(resultSetHandler(selectNamesAndSurnames(connection)).toString());
+            Connection connection = myConnector(url, username, password);
+            Statement statement = connection.createStatement();
+            System.out.println(resultSetHandler(selectNamesAndSurnames(statement)).toString());
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -20,8 +21,10 @@ public class Main {
 
     }
 
-    public static ResultSet selectNamesAndSurnames (Connection connection) throws SQLException {
-        Statement statement = connection.createStatement();
+    public static Connection myConnector(String url, String username, String password) throws SQLException {
+        return DriverManager.getConnection(url, username, password);
+    }
+    public static ResultSet selectNamesAndSurnames (Statement statement) throws SQLException {
         String query = "SELECT first_name, last_name" +
                 " FROM students";
         ResultSet resultSet = statement.executeQuery(query);

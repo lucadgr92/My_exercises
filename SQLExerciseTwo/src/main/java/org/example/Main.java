@@ -10,12 +10,13 @@ public class Main {
 
 
         try {
-            Connection connection = DriverManager.getConnection(url, username, password);
-            tableCreator(connection);
-            studentAdder(connection, "Rossi", "Mario");
-            studentAdder(connection, "Bianchi", "Paolo");
-            studentAdder(connection, "Innocenzi", "Vincenzina");
-            studentAdder(connection, "Inzerillo", "Andrea");
+            Connection connection = myConnector(url,username,password);
+            Statement statement = connection.createStatement();
+            tableCreator(statement);
+            studentAdder(statement, "Rossi", "Mario");
+            studentAdder(statement, "Bianchi", "Paolo");
+            studentAdder(statement, "Innocenzi", "Vincenzina");
+            studentAdder(statement, "Inzerillo", "Andrea");
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -23,21 +24,23 @@ public class Main {
 
     }
 
-public static void tableCreator (Connection connection) throws SQLException {;
-    Statement statement = connection.createStatement();
-    String query = "CREATE TABLE students (" +
-            "ID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY," +
-            "last_name VARCHAR(30)," +
-            "first_name VARCHAR(30)" +
-            ")";
-    statement.executeUpdate(query);
-}
+    public static Connection myConnector(String url, String username, String password) throws SQLException {
+        return DriverManager.getConnection(url, username, password);
+    }
 
-public static void studentAdder (Connection connection, String lastName, String firstName) throws SQLException {
-    Statement statement = connection.createStatement();
-    String query = "INSERT INTO students (last_name, first_name) VALUES ('" + lastName + "', '" + firstName + "')";
-    statement.executeUpdate(query);
-}
+    public static void tableCreator(Statement statement) throws SQLException {
+        String query = "CREATE TABLE students (" +
+                "ID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY," +
+                "last_name VARCHAR(30)," +
+                "first_name VARCHAR(30)" +
+                ")";
+        statement.executeUpdate(query);
+    }
+
+    public static void studentAdder(Statement statement, String lastName, String firstName) throws SQLException {
+        String query = "INSERT INTO students (last_name, first_name) VALUES ('" + lastName + "', '" + firstName + "')";
+        statement.executeUpdate(query);
+    }
 
 }
 

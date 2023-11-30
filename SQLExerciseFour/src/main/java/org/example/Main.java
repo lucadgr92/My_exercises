@@ -13,24 +13,27 @@ public class Main {
 
 
         try {
-            Connection connection = DriverManager.getConnection(url, username, password);
-            addColumn(connection);
-            modifyNationality(connection,"Italy", "Germany");
+            Connection connection = myConnector(url, username, password);
+            Statement statement = connection.createStatement();
+            addColumn(statement);
+            modifyNationality(statement,"Italy", "Germany");
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
     }
 
-    public static void addColumn (Connection connection) throws SQLException {
-        Statement statement = connection.createStatement();
+    public static Connection myConnector(String url, String username, String password) throws SQLException {
+        return DriverManager.getConnection(url, username, password);
+    }
+
+    public static void addColumn (Statement statement) throws SQLException {
         String query = "ALTER TABLE students" +
                 " ADD COLUMN country VARCHAR(30);";
         statement.executeUpdate(query);
     }
 
-    public static void modifyNationality(Connection connection, String str1, String str2) throws SQLException {
-        Statement statement = connection.createStatement();
+    public static void modifyNationality(Statement statement, String str1, String str2) throws SQLException {
         String query = "UPDATE students" +
                 " SET country = CASE" +
                 " WHEN ID BETWEEN 1 and 2 THEN '" + str1 + "'" +
